@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Aushadha : AuShadha (औषध): Means medicine in Sanskrit. This is A Public Health Management System with Django back end and Dojo front end optimised for Indian Primary Health Setup but extensible and/or applicable elsewhere. AuShadha is GPLv3 Licensed. " />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
 
-    <title>Aushadha</title>
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Aushadha by dreaswar</title>
   </head>
 
   <body>
+    <a id="forkme_banner" href="https://github.com/dreaswar/AuShadha">View on GitHub</a>
+    <div class="shell">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/dreaswar/AuShadha">View on GitHub</a>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Aushadha</h1>
+            <h2>AuShadha (औषध): Means medicine in Sanskrit. This is A Public Health Management Electroni Medical Record System with Django back end and Dojo front end.  AuShadha is GPLv3 Licensed. </h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-          <h1 id="project_title">Aushadha</h1>
-          <h2 id="project_tagline">AuShadha (औषध): Means medicine in Sanskrit. This is A Public Health Management System with Django back end and Dojo front end optimised for Indian Primary Health Setup but extensible and/or applicable elsewhere. AuShadha is GPLv3 Licensed. </h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/dreaswar/AuShadha/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/dreaswar/AuShadha/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to AuShadha</h3>
-
-<p>Welcome to the Home Page of AuShadha project. 
-This is a initiative by me, a Paediatric Orthopaedic and Spine Surgeon practising at Coimbatore, India to develop and Open Source Initiative into Public Health Management. </p>
-
-<h3>License</h3>
-
-<p>GNU GPL v3</p>
-
-<h3>Technical Details</h3>
-
-<p>Backend : Django 1.4
-Frontend: Dojo 1.7.2
-Dependencies: see docs/REQUIREMENTS.txt</p>
-
-<h3>Contributors are welcome.</h3>
-
-<p>Right now I am the maintainer.
-Contributions are welcome. 
-Please drop me a line at <a href="mailto:dreaswar@gmail.com">dreaswar@gmail.com</a> or at GitHub <a href="https://github.com/dreaswar" class="user-mention">@dreaswar</a>
-Visit <a></a><a href="http://www.dreaswar.com">http://www.dreaswar.com</a> </p>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/dreaswar/AuShadha/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/dreaswar/AuShadha/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Aushadha maintained by <a href="https://github.com/dreaswar">dreaswar</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <p><a href="http://dreaswar.files.wordpress.com/2012/08/aushadha_logo1.png">http://dreaswar.files.wordpress.com/2012/08/aushadha_logo1.png</a></p>
+
+<h1>AuShadha  (औषध)</h1>
+
+<p>AuShadha (औषध): Means medicine in Sanskrit. This is A Public Health Management System with Django back end and Dojo front end optimised for Indian Primary Health Setup but extensible and/or applicable elsewhere</p>
+
+<p>AuShadha code is licensed under GNU-GPL Version 3</p>
+
+<h1>How to Test</h1>
+
+<p>1) Activate Python VirtualEnv <code> source bin/activate </code> from the python_env directory</p>
+
+<p>2) go to src/AuShadha directory <code> cd src/AuShadha </code></p>
+
+<p>3) run <code> python manage.py runserver </code></p>
+
+<p>4) Use your browser to navigate to http://localhost:8000/</p>
+
+<h1>Plan</h1>
+
+<p>1) I plan to develop the Clinic, Patient, Physician, Nurse modules first.<br>
+2) Visit Module will be next followed by Clinical Exam, Investigations, Procedure, Discharge, Prescription<br>
+3) Stock and Pharmacy will follow.<br>
+4) Allergy and Incident Reports next<br>
+5) Admission Module will follow.<br>
+6) Specific public health modules like Paediatrics, Neonatology, Gynaecology/ Obstetrics will be last as by then
+   the interdependencies will be solved  </p>
+
+<h1>Want to participate ?</h1>
+
+<p>Suggestions and participation are welcome.<br>
+Please email me at <a href="mailto:dreaswar@gmail.com">dreaswar@gmail.com</a><br>
+Visit me at <a href="http://www.dreaswar.com">http://www.dreaswar.com</a><br>
+Follow me at <a href="http://www.twitter.com/dreaswar/">http://www.twitter.com/dreaswar/</a>  </p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/dreaswar">dreaswar</a> can be found on <a href="https://github.com/dreaswar/AuShadha">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
       </footer>
+
     </div>
 
               <script type="text/javascript">
@@ -73,7 +106,6 @@ Visit <a></a><a href="http://www.dreaswar.com">http://www.dreaswar.com</a> </p>
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
