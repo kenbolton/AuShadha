@@ -3,66 +3,97 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Aushadha by dreaswar</title>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>AuShadha by dreaswar</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/dreaswar/AuShadha">View on GitHub</a>
-    <div class="shell">
+    <div id="container">
+      <div class="inner">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Aushadha</h1>
-            <h2>AuShadha (औषध): Means medicine in Sanskrit. This is A Public Health Management Electroni Medical Record System with Django back end and Dojo front end.  AuShadha is GPLv3 Licensed. </h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+        <header>
+          <h1>AuShadha</h1>
+          <h2>AuShadha (औषध): Means medicine in Sanskrit. This is a Open Source EMR &amp; Public Health Management System for clicnics with Django and Dojo.  AuShadha is GNU-GPL version3 Licensed. </h2>
+        </header>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/dreaswar/AuShadha/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/dreaswar/AuShadha/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/dreaswar/AuShadha/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/dreaswar/AuShadha/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/dreaswar/AuShadha" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
+        <hr>
 
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <p><a href="http://dreaswar.files.wordpress.com/2012/08/aushadha_logo1.png">http://dreaswar.files.wordpress.com/2012/08/aushadha_logo1.png</a></p>
+        <section id="main_content">
+          <p><img src="http://dreaswar.files.wordpress.com/2012/08/aushadha_logo_1281.png" alt="AuShadha"></p>
 
 <h1>AuShadha  (औषध)</h1>
 
-<p>AuShadha (औषध): Means medicine in Sanskrit. This is A Public Health Management System with Django back end and Dojo front end optimised for Indian Primary Health Setup but extensible and/or applicable elsewhere</p>
+<p>AuShadha (औषध): Means medicine in Sanskrit. </p>
 
-<p>AuShadha code is licensed under GNU-GPL Version 3</p>
+<p>This is a Open Source Electornic Medical Records (EMR) &amp; Public Health Management System for Small Clinics.</p>
+
+<p>It might be even suited for speciality medical practice after some customisation. </p>
+
+<p>It is developed with Python, Django and Dojo </p>
+
+<p>For Development the code uses sqlite3 database, but with Django DB backend we can extend this to any database ( PostgresSQL is preferred ).</p>
+
+<p>AuShadha code is licensed under GNU-GPL Version 3. Django, Dojo, Icons and other thrid party modules are licensed as per their authors. This should be honoured.</p>
+
+<h1>Aims</h1>
+
+<p>There are many great Open Source EMR and Clinic Management projects, but most of them have very poor front ends. </p>
+
+<p>As in life, beauty and usability are key in medical practice.</p>
+
+<p>It is natural that more visually appealing it is more you want to use it. </p>
+
+<p>AuShadha will strive to achieve a balance between back and front end design. </p>
+
+<p>To achieve that aim Django and Dojo has been chosen. </p>
+
+<p>AuShadha is designed by me, a Medical Doctor in association with other Developers, so usability and practicability will always be foremost. </p>
+
+<p>AuShadha benefits from inputs, feature requests from my medical colleagues as the development progresses. </p>
 
 <h1>How to Test</h1>
 
-<p>1) Activate Python VirtualEnv <code> source bin/activate </code> from the python_env directory</p>
+<p>1) AuShadha requirements please refer to Requirements.txt in docs/</p>
 
-<p>2) go to src/AuShadha directory <code> cd src/AuShadha </code></p>
+<p>2) AuShadha has been tested and developed with Python 2.7, Django 1.4.1 and Dojo 1.7.2 in Linux. It should work as long as dependencies are satisfied. </p>
 
-<p>3) run <code> python manage.py runserver </code></p>
+<p>3) Ideally create a Python Virtual Environment. If virtualenv is not installed, please run in Debian systems <code> sudo easy_install virtualenv </code></p>
 
-<p>4) Use your browser to navigate to http://localhost:8000/</p>
+<p>4) After installing virtualenv, Create a Python Virtual Environment  <code> virtualenv python_env </code> </p>
+
+<p>5) Change the working directory to the virtualenv folder <code> cd python_env </code> and activate it <code> source bin/activate </code></p>
+
+<p>6) With Python pip installed, run <code> pip install -f requirements.txt </code>. This will install all the necessary dependencies you need. </p>
+
+<p>7) cd into src/AuShadha directory <code> cd src/AuShadha </code></p>
+
+<p>8) run <code> python manage.py runserver </code></p>
+
+<p>9) Use your browser to navigate to http://localhost:8000/AuShadha/. You will be greeted with a login page. Use username = admin, password = admin for a trial run. </p>
+
+<p>10) Please read the issues, license before using. Currently AuShadha is under active development and is not fit in anyway for real world use.</p>
+
+<h1>Project Structure</h1>
+
+<p>AuShadha_logo : Contains the logo, with SVG and .png file along with License.</p>
+
+<p>docs          : Contains the Requirements.txt, License.txt</p>
+
+<p>src           : Project Source Code, Media files(Icons,Images, File uploads), Javscript (custom and Dojo)</p>
+
+<p>README.md</p>
 
 <h1>Plan</h1>
 
@@ -76,27 +107,20 @@
 
 <h1>Want to participate ?</h1>
 
-<p>Suggestions and participation are welcome.<br>
-Please email me at <a href="mailto:dreaswar@gmail.com">dreaswar@gmail.com</a><br>
+<p>Suggestions and participation are welcome.   </p>
+
+<p>Please email me at <a href="mailto:dreaswar@gmail.com">dreaswar@gmail.com</a><br>
 Visit me at <a href="http://www.dreaswar.com">http://www.dreaswar.com</a><br>
-Follow me at <a href="http://www.twitter.com/dreaswar/">http://www.twitter.com/dreaswar/</a>  </p>
-      </section>
+Follow me at <a href="http://www.twitter.com/dreaswar/">http://www.twitter.com/dreaswar/</a><br>
+Follow the Project news at <a href="http://www.facebook.com/AuShadha/">http://www.facebook.com/AuShadha/</a>  </p>
+        </section>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/dreaswar">dreaswar</a> can be found on <a href="https://github.com/dreaswar/AuShadha">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
+        <footer>
+          AuShadha is maintained by <a href="https://github.com/dreaswar">dreaswar</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-    </div>
-
-              <script type="text/javascript">
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -107,5 +131,7 @@ Follow me at <a href="http://www.twitter.com/dreaswar/">http://www.twitter.com/d
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
