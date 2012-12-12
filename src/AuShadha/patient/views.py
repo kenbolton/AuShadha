@@ -824,6 +824,22 @@ def alternate_layout(request):
 
 
 @login_required
+def portlet_layout(request):
+    '''
+
+    View for Generating an Portlet layout for sandboxing purposes...
+    '''
+    user = request.user
+    all_patients = PatientDetail.objects.all().order_by('first_name')
+    variable            = RequestContext(request,{'user'              : user,
+                                                  "all_patients"      : all_patients,
+                                                   "alternate_layout" : True
+                                                 })
+    return render_to_response('base_portlets.html', variable)
+
+
+
+@login_required
 def render_patient_list(request):
   '''
     View for Generating Patient List
